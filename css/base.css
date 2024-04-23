@@ -1,0 +1,284 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: 16px;
+	--color-text: rgb(227 226 220 / 86%);
+	--color-bg: #000;
+	--color-link: rgb(227 226 220 / 86%);
+	--color-link-hover: rgb(227 226 220 / 100%);
+	--page-padding: 1.5rem;
+}
+
+body {
+	margin: 0;
+	color: var(--color-text);
+	background-color: var(--color-bg);
+	font-family: "scale-variable", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+	font-variation-settings: "wght" 400, "wdth" 100;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-image: url(../img/noise.png);
+  background-size: 200px;
+}
+
+/* Page Loader */
+.js .loading::before,
+.js .loading::after {
+	content: '';
+	position: fixed;
+	z-index: 1000;
+}
+
+.js .loading::before {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--color-bg);
+}
+
+.js .loading::after {
+	top: 50%;
+	left: 50%;
+	width: 60px;
+	height: 60px;
+	margin: -30px 0 0 -30px;
+	border-radius: 50%;
+	opacity: 0.4;
+	background: var(--color-link);
+	animation: loaderAnim 0.7s linear infinite alternate forwards;
+
+}
+
+@keyframes loaderAnim {
+	to {
+		opacity: 1;
+		transform: scale3d(0.5,0.5,1);
+	}
+}
+
+a {
+	text-decoration: none;
+	color: var(--color-link);
+	outline: none;
+	cursor: pointer;
+	opacity: 0.5;
+}
+
+a:hover {
+	text-decoration: none;
+	color: var(--color-link-hover);
+	outline: none;
+	opacity: 1;
+}
+
+/* Better focus styles from https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible */
+a:focus {
+	/* Provide a fallback style for browsers
+	 that don't support :focus-visible */
+	outline: none;
+	background: lightgrey;
+}
+
+a:focus:not(:focus-visible) {
+	/* Remove the focus indicator on mouse-focus for browsers
+	 that do support :focus-visible */
+	background: transparent;
+}
+
+a:focus-visible {
+	/* Draw a very noticeable focus style for
+	 keyboard-focus on browsers that do support
+	 :focus-visible */
+	outline: 2px solid red;
+	background: transparent;
+}
+
+.unbutton {
+	background: none;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	font: inherit;
+	cursor: pointer;
+}
+
+.unbutton:focus {
+	outline: none;
+}
+
+.type-small {
+	font-size: 13px;
+	font-family: "iki-mono-variable", sans-serif;
+	font-variation-settings: "wdth" 100, "wght" 300;
+	text-transform: uppercase;
+}
+
+.frame {
+	padding: var(--page-padding);
+	position: relative;
+	display: grid;
+	z-index: 800;
+	width: 100%;
+	height: 100%;
+	grid-row-gap: 1rem;
+	grid-column-gap: 2rem;
+	pointer-events: none;
+	justify-items: start;
+}
+
+.frame--header {
+  grid-template-columns: 100%;
+  grid-template-areas: 'title' 'archive' 'back' 'github' 'sub' 'sponsor';
+}
+
+.frame--footer {
+  margin-top: 40vh;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+}
+
+.frame #cdawrap {
+  justify-self: start;
+}
+
+.frame a {
+  pointer-events: auto;
+}
+
+.frame__title {
+  grid-area: title;
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
+.frame__back {
+  grid-area: back;
+  justify-self: start;
+}
+
+.frame__archive {
+  grid-area: archive;
+  justify-self: start;
+}
+
+.frame__sub {
+  grid-area: sub;
+}
+
+.frame__github {
+  grid-area: github;
+}
+
+.tags {
+	display: flex;
+	gap: 0.75rem;
+	margin-bottom: 2rem;
+}
+
+.tags a {
+	border: 1px solid;
+	padding: 0.25rem 0.25rem 0.15rem 0.25rem;
+	line-height: 1;
+	border-radius: 3px;
+}
+
+.frame__demos {
+	grid-area: demos;
+	display: flex;
+	gap: 1rem;
+}
+
+.intro {
+	padding: var(--page-padding);
+	display: grid;
+	place-items: center;
+	line-height: 1;
+	min-height: calc(100vh - 6rem);
+	margin-bottom: 50vh;
+	justify-content: center;
+	align-items: center;
+}
+
+.intro__heading {
+	display: grid;
+	gap: 1rem;
+}
+
+.intro__heading h2 {
+	font-size: clamp(2rem, 7vw, 4rem);
+	font-variation-settings: 'wdth' 120, 'wght' 200;
+	width: 70vw;
+	max-width: 1000px;
+	min-width: 300px;
+	margin: 0;
+}
+
+.intro__heading p {
+	margin: 0;
+	max-width: 200px;
+	justify-self: end;
+	text-align: justify;
+	margin-top: 20vh;
+}
+
+.content {
+	padding: var(--page-padding);
+	display: flex;
+	flex-direction: column;
+	gap: 20vh;
+	width: 100vw;
+	position: relative;
+	min-height: 100vh;
+	place-items: center;
+	margin-bottom: 70vh;
+}
+
+.blur-text {
+	width: 70vw;
+	max-width: 1000px;
+	min-width: 300px;
+	line-height: 1.2;
+	font-family: "instrument-sans-variable", sans-serif;
+	font-size: clamp(1.5rem,5vw,3rem);
+}
+
+.blur-text--1 {
+	font-variation-settings: "wght" 420, "wdth" 100;
+	letter-spacing: -0.05em;
+}
+
+.blur-text--2 {
+	font-family: "iki-mono-variable", sans-serif;
+	font-variation-settings: "wdth" 80, "wght" 300;
+}
+
+.blur-text--3 {
+	font-variation-settings: "wght" 600, "wdth" 100;
+	letter-spacing: -0.05em;
+}
+
+.blur-text--4 {
+	font-variation-settings: "wght" 400, "wdth" 95;
+	letter-spacing: -0.05em;
+}
+
+@media screen and (min-width: 53em) {
+	.frame--header {
+		grid-template-columns: auto auto auto auto 1fr;
+		grid-template-rows: auto;
+		grid-template-areas: 'title back archive github sponsor';
+	}
+	.frame--footer {
+		grid-template-columns: auto auto auto;
+	}
+	.frame #cdawrap, 
+	.frame__sub {
+		justify-self: end;
+	}
+}

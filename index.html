@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js loading">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>On-Scroll Blur Reveal | Codrops</title>
+		<meta name="description" content="A blurry text reveal animation on scroll." />
+		<meta name="keywords" content="blurry text, animation, blur reveal, scroll based, gsap" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" href="https://use.typekit.net/lnu1fpi.css">
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+    	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+		<script>document.documentElement.className="js";</script>
+		<script src="//tympanus.net/codrops/adpacks/analytics.js"></script>
+	</head>
+	<body class="demo-1">
+		<main>
+			<header class="frame frame--header type-small">
+				<h1 class="frame__title">Blurry Text Reveal on Scroll</h1> 
+				<a class="frame__back" href="https://tympanus.net/codrops/?p=76992">Article</a>
+				<a class="frame__archive" href="https://tympanus.net/codrops/demos/">All demos</a>
+				<a class="frame__github" href="https://github.com/codrops/ScrollBlurTypography/">GitHub</a>
+				
+			</header>
+			<section class="intro">
+				<div class="intro__heading">
+					<nav class="tags type-small">
+						<a href="https://tympanus.net/codrops/demos/?tag=scroll">#scroll</a>
+						<a href="https://tympanus.net/codrops/demos/?tag=typography">#typography</a>
+					</nav>
+					<h2>On-Scroll <br>Blur Reveal</h2>
+					<p class="type-small">Howdy, cowboy! Before you go scrollin', simmer down and savor the ride. Yeehaw, but easy now!</p>
+				</div>
+			</section>
+			<section class="content">
+				<span class="content__number type-small">1</span>
+				<div class="blur-text blur-text--1" data-effect-1>
+			      	Public opinion is the aggregate result of individual opinions—now uniform, now conflicting—of the men and women who make up society or any group of society. In order to understand public opinion, one must go back to the individual who makes up the group.
+			    </div>
+		   	</section>
+		   	<section class="content">
+		   		<span class="content__number type-small">2</span>
+				<div class="blur-text blur-text--2" data-effect-2>
+			       The mental equipment of the average individual consists of a mass of judgments on most of the subjects which touch his daily physical or mental life.
+			    </div>
+		   	</section>
+		   	<section class="content">
+		   		<span class="content__number type-small">3</span>
+				<div class="blur-text blur-text--3" data-effect-3>
+					These judgments are the tools of his daily being and yet they are his judgments, not on a basis of research and logical deduction, but for the most part dogmatic expressions accepted on the authority of his parents, his teachers, his church, and of his social, his economic and other leaders.
+			    </div>
+		   	</section>
+		   	<section class="content">
+		   		<span class="content__number type-small">4</span>
+				<div class="blur-text blur-text--4" data-effect-4>
+			    	In tracing the interaction of institution upon public and public upon institution, one finds a circle of obedience and leadership. The press, the school and other leaders of thought are themselves working in a background which they cannot entirely control.
+			    </div>
+		   	</section>
+		   	<footer class="frame frame--footer type-small">
+				<span>Created by <a href="https://x.com/codrops">@codrops</a> 2024</span>
+				<span>Text from <a href="https://www.gutenberg.org/ebooks/61364">Crystallizing Public Opinion</a> by <a href="https://en.wikipedia.org/wiki/Edward_Bernays">Edward L. Bernays</a></span>
+				<a href="https://tympanus.net/codrops/collective/">Subscribe to our frontend newsletter</a>
+			</footer>
+		</main>
+		<script src="https://tympanus.net/codrops/adpacks/cda_sponsor.js"></script>
+		<!-- JavaScript dependencies -->
+		<!-- GSAP library -->
+		<script src="js/gsap.min.js"></script>
+		<!-- GSAP ScrollTrigger plugin -->
+		<script src="js/ScrollTrigger.min.js"></script>
+
+		<!-- SplitType for text manipulation: https://github.com/lukePeavey/SplitType -->
+		<script src="js/split-type.min.js"></script>
+
+		<!-- Add (Lenis) smooth scroll -->
+		<script src="js/lenis.min.js"></script>
+		<script src="js/smoothscroll.js"></script>
+
+		<!-- Scripts for the effect -->
+		<script type="module" src="js/index.js"></script>
+	</body>
+</html>
