@@ -2,7 +2,7 @@
 
 Some blurry text reveal animations inspired by [Rauno's Blur reveal](https://twitter.com/raunofreiberg/status/1781027213921460534).
 
-![Blur Reveal](https://tympanus.net/codrops/wp-content/uploads/2024/04/blur_featured.jpg?x32096)
+![Blur Reveal](https://tympanus.net/codrops/wp-content/uploads/2024/04/blurrytext_featured.jpg?x32096)
 
 [Article on Codrops](https://tympanus.net/codrops/?p=76992)
 
