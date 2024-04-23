@@ -81,13 +81,6 @@ a:focus {
 	/* Provide a fallback style for browsers
 	 that don't support :focus-visible */
 	outline: none;
-	background: lightgrey;
-}
-
-a:focus:not(:focus-visible) {
-	/* Remove the focus indicator on mouse-focus for browsers
-	 that do support :focus-visible */
-	background: transparent;
 }
 
 a:focus-visible {
@@ -95,7 +88,6 @@ a:focus-visible {
 	 keyboard-focus on browsers that do support
 	 :focus-visible */
 	outline: 2px solid red;
-	background: transparent;
 }
 
 .unbutton {
@@ -268,6 +260,25 @@ a:focus-visible {
 	letter-spacing: -0.05em;
 }
 
+.card-wrap {
+	margin-top: 5vh;
+	display: grid;
+	grid-gap: 2rem;
+	grid-auto-flow: row;
+	grid-template-columns: 250px;
+}
+
+.card__image {
+	display: block;
+	border-radius: 7px;
+	background-size: cover;
+	background-position: 50% 50%;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 4 / 3;
+	filter: brightness(0.8);
+}
+
 @media screen and (min-width: 53em) {
 	.frame--header {
 		grid-template-columns: auto auto auto auto 1fr;
@@ -280,5 +291,8 @@ a:focus-visible {
 	.frame #cdawrap, 
 	.frame__sub {
 		justify-self: end;
+	}
+	.card-wrap {
+		grid-template-columns: repeat(3,250px);
 	}
 }
